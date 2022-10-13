@@ -15,7 +15,7 @@ namespace MCT.Functions
     {
         [FunctionName("AddRegistrationNoSql")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = "v1/registrations")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "v2/registrations")] HttpRequest req,
             ILogger log)
         {
             string tableUrl = Environment.GetEnvironmentVariable("TableUrl");
